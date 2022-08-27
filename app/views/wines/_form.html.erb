@@ -21,6 +21,9 @@
     <%= f.text_field :image %>
     <br><br>
 
+    <%= f.label :region_id, 'Region' %>
+    <%= f.collection_select :region_id, Region.all, :id, :name, include_blank: true %>
+
     <%= f.submit %>
 
 

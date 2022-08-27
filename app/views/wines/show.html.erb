@@ -23,4 +23,10 @@
     <em><%= @wine.vintage %></em> 
 </p>
 
+<%# <p>
+    <strong>Region :</strong>
+    <%= link_to @wine.region.name, region_path(@wine.region.id) %>
+    
+<%# </p>  %>
+
 <%= image_tag @wine.image, class: 'wine' %>

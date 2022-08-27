@@ -1,0 +1,12 @@
+
+<h2> All Regions </h2>
+
+<ul>
+ <% @regions.each do |region| %>
+    <li>
+        <%= link_to region.name, region_path(region.id) %>
+    </li>
+    <% end %>
+</ul>
+
+<img src="" alt="" class="">

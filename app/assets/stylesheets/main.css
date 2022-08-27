@@ -1,0 +1,24 @@
+
+a {
+   text-decoration: none; 
+   color: black;
+}
+
+a:hover {
+    color:rgb(46, 198, 147);
+}
+
+li {
+    list-style: none;
+    padding: 5px;
+}
+
+.wine {
+    max-width: 50vw;
+    max-height: 50vw;
+    display: inline-block;
+}
+
+.region {
+    max-width: 70vw;
+}
