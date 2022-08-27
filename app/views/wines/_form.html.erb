@@ -1,0 +1,27 @@
+
+<%= form_with model: @wine, local: true do |f| %>
+
+     <%= f.label :name %>
+    <br>
+    <%= f.text_field :name %>
+    <br><br>
+
+     <%= f.label :style %>
+    <br>
+    <%= f.text_field :style %>
+    <br><br>
+
+     <%= f.label :vintage %>
+    <br>
+    <%= f.text_field :vintage %>
+    <br><br>
+
+     <%= f.label :image, 'Image URL' %>
+    <br>
+    <%= f.text_field :image %>
+    <br><br>
+
+    <%= f.submit %>
+
+
+<% end %>

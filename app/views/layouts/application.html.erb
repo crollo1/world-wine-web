@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WorldWineWeb</title>
+    <title>World Wine Web</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,30 @@
   </head>
 
   <body>
+   <nav>
+      <h1>World Wine Web</h1>
+      <a href="/">Home</a>
+      <br>
+      <%= link_to 'Wine List', wines_path %>
+      |
+      <%= link_to 'Add a Delicious Wine', new_wine_path %>
+      |
+      <%= link_to 'Vino Regions', regions_path %>
+      |
+      <%= link_to 'Add a Favourite Region', new_region_path %>
+      |
+      
+      <hr>
+    </nav>
+
     <%= yield %>
+
+    <br><br>
+    <hr>
+
+    <footer>
+      &copy; Wine Snob Particulars 2022
+    </footer>
+
   </body>
 </html>

@@ -1,0 +1,26 @@
+
+<h2>
+    <%= @wine.name  %>
+    
+</h2>
+
+<%= link_to 'Edit', edit_wine_path(@wine.id) %>
+|
+<%= link_to 'Delete', wine_path(@wine.id), method: 'delete' %>
+
+<p>
+    <strong>Name: </strong>
+    <em><%= @wine.name %></em> 
+</p>
+
+<p>
+    <strong>Style: </strong>
+    <em><%= @wine.style %></em> 
+</p>
+
+<p>
+    <strong>Vintage:</strong>
+    <em><%= @wine.vintage %></em> 
+</p>
+
+<%= image_tag @wine.image, class: 'wine' %>

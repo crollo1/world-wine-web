@@ -1,0 +1,17 @@
+
+<h2> All Wines </h2>
+
+<ul>
+
+    <% @wines.each do |wine| %>
+    <li>
+    <%= link_to wine.name, wine_path(wine.id) %>
+    </li>
+    <% end %>
+
+
+</ul>
+
+    <div id="">
+    <img src="" alt=""> 
+    </div>

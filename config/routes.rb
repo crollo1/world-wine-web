@@ -1,3 +1,16 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+
+  get 'wines/new'
+  get 'wines/create'
+  get 'wines/index'
+  get 'wines/show'
+  get 'wines/edit'
+  get 'wines/update'
+  get 'wines/destroy'
+  root to: 'pages#home'
+
+  resources :wines, :regions
+
+
 end
