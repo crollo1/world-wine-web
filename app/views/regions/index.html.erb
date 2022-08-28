@@ -1,12 +1,29 @@
 
 <h2> All Regions </h2>
 
-<ul>
- <% @regions.each do |region| %>
-    <li>
-        <%= link_to region.name, region_path(region.id) %>
-    </li>
-    <% end %>
-</ul>
 
-<img src="" alt="" class="">
+
+<%= link_to 'Add a Favourite Region', new_region_path %>
+
+
+<div id="regionpage">
+
+    
+
+    <div id="regionimage">    
+        <img src="https://travelparlor.com/wp-content/uploads/2017/07/Louis-Philippe-Bovard.jpg" class="regionsimage">
+    </div>
+
+    <div id="regionindex">
+        <ul>
+        <% @regions.each do |region| %>
+            <li>
+                <%= link_to region.name, region_path(region.id) %>
+            </li>
+            <% end %>
+        </ul>
+
+    </div>
+
+
+</div>

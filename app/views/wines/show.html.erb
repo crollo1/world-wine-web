@@ -4,9 +4,13 @@
     
 </h2>
 
-<%= link_to 'Edit', edit_wine_path(@wine.id) %>
-|
-<%= link_to 'Delete', wine_path(@wine.id), method: 'delete' %>
+
+<%= link_to 'See Some Reviews', reviews_path %>
+||
+<%= link_to 'Write a Review', new_review_path %>
+
+    
+<br>
 
 <p>
     <strong>Name: </strong>
@@ -28,5 +32,11 @@
     <%= link_to @wine.region.name, region_path(@wine.region.id) %>
     
 <%# </p>  %>
+<br>
 
 <%= image_tag @wine.image, class: 'wine' %>
+<br><br><br>
+<%= link_to 'Edit Wine', edit_wine_path(@wine.id) %>
+||
+<%= link_to 'Delete Wine', wine_path(@wine.id), method: 'delete' %>
+<br>

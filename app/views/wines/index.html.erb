@@ -1,17 +1,22 @@
 
 <h2> All Wines </h2>
 
-<ul>
+<div id="winepage">
+    <div id="wineindex">
+        <ul>
 
-    <% @wines.each do |wine| %>
-    <li>
-    <%= link_to wine.name, wine_path(wine.id) %>
-    </li>
-    <% end %>
+            <% @wines.each do |wine| %>
+            <li>
+            <%= link_to wine.name, wine_path(wine.id) %>
+            </li>
+            <% end %>
 
 
-</ul>
-
-    <div id="">
-    <img src="" alt=""> 
+        </ul>
+        <br>
     </div>
+        
+    <div id="listimage">
+        <img class="winelist" src="https://elitetraveler.com/wp-content/uploads/sites/8/2021/11/GettyImages-1144313965-e1636390152967.jpg"> 
+    </div>
+</div>

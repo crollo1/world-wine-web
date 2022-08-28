@@ -173,23 +173,33 @@ rev1 = Review.create!(
 )
 
 rev2 = Review.create!( 
-    score: 85, 
+    score: 91, 
     description: 'Delicate balance, all round pleasure'
 )
 
 rev3 = Review.create!( 
-    score: 85,  
+    score: 98,  
     description: 'Worth every cent, lives up to its name'
 )
 
 rev4 = Review.create!( 
-    score: 85, 
+    score: 67, 
     description: 'No structure, overpowering tannins'
 )
 
 rev5 = Review.create!( 
-    score: 85, 
+    score: 88, 
     description: 'Sign me up for more! A real pleaser for the price point'
 )
 
 puts "created #{ Review.count } reviews."
+
+#######################################
+#create associations
+
+# rev1.wines << w3
+# rev2.wines << w5
+# rev3.wines << w4
+# rev4.wines << w7
+# rev5.wines << w1
+
