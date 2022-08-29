@@ -41,14 +41,14 @@
 <%= link_to 'Delete Wine', wine_path(@wine.id), method: 'delete' %>
 <br><br>
 
-<!--loop through reviews for specific wine-->
-<ul>
-    <% @reviews.each do |review| %>
+
+<ul id="reviewlist">
+    <% @wine.reviews.each do |review| %>
         <li>
 
-            <p><strong>Rating:</strong> <%= @reviews.score, review_path(review.id) %></p>
+            <p><strong>Rating:</strong> <%= review.score%></p>
         
-            <p><strong>Review: </strong><%= @reviews.description, review_path(review.id) %></p>
+            <p><strong>Review: </strong>"<em><%= review.description%></em>"</p>
 
         </li>
     <% end %>

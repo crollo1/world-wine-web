@@ -12,6 +12,11 @@
     <%= f.text_area :description %>
     <br><br>
 
+     <%= f.collection_select :wine_id, Wine.all, :id, :name, include_blank: true %>
+
+
+    <br><br>
+
     <%= f.submit %>
 
 <% end %>

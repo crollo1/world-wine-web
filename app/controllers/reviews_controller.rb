@@ -9,7 +9,7 @@ class ReviewsController < ApplicationController
   def create
 
     Review.create review_params
-    redirect_to reviews_path
+    redirect_to review_path
 
   end #create
 
