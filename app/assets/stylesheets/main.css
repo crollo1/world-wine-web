@@ -50,14 +50,17 @@ ul {
     max-width: 30vw;
     max-height: 50vh;
     display: inline-block;
+    border-radius: 5px;
 }
 
 .region {
-    max-width: 70vw;
+    max-width: 60vw;
+    border-radius: 5px;
 }
 
 .homeimage {
     max-width: 70vw;
+    border-radius: 5px;
 }
 
 .winelist {
@@ -95,5 +98,14 @@ ul {
 .reviewimage {
     max-width: 90vw;
 
+}
+
+.reviewlist {
+    margin-left: 40px;
+}
+
+.review {
+    max-width: 30vw;
+    max-height: 40vh;
 }
 

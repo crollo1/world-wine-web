@@ -34,8 +34,9 @@ class ReviewsController < ApplicationController
   def update
 
     @review = Review.find params[:id]
-    review.update review_params
-    redirect_to review_path(review.id)
+    @review.update review_params
+    redirect_to reviews_path
+    params[:id]
 
   end #update
 

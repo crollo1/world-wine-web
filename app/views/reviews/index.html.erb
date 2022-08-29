@@ -1,12 +1,13 @@
 
 <h2>All Reviews</h2>
 
-<ul>
+<ul class="reviewlist">
  <% @reviews.each do |review| %>
     <li>
-        <%= link_to review.score, reviews_path(review.id)  %>
-
-        <%= link_to review.description, reviews_path(review.id) %>
+        <p><strong>Score:</strong> <%= link_to review.score, review_path(review.id)  %></p>
+        
+        <p><strong>Review: </strong><%= link_to review.description, review_path(review.id) %></p>
+        
         
     </li>
     <% end %>

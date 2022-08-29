@@ -5,9 +5,9 @@
 </h2>
 
 
-<%= link_to 'See Some Reviews', reviews_path %>
-||
-<%= link_to 'Write a Review', new_review_path %>
+<%# <%= link_to 'See Some Reviews', reviews_path %> 
+
+<%= link_to '--> Review this Wine <--', new_review_path %>
 
     
 <br>
@@ -27,11 +27,11 @@
     <em><%= @wine.vintage %></em> 
 </p>
 
-<%# <p>
+<p>
     <strong>Region :</strong>
     <%= link_to @wine.region.name, region_path(@wine.region.id) %>
     
-<%# </p>  %>
+</p>  
 <br>
 
 <%= image_tag @wine.image, class: 'wine' %>
@@ -39,4 +39,18 @@
 <%= link_to 'Edit Wine', edit_wine_path(@wine.id) %>
 ||
 <%= link_to 'Delete Wine', wine_path(@wine.id), method: 'delete' %>
-<br>
+<br><br>
+
+<!--loop through reviews for specific wine-->
+<ul>
+    <% @reviews.each do |review| %>
+        <li>
+
+            <p><strong>Rating:</strong> <%= @reviews.score, review_path(review.id) %></p>
+        
+            <p><strong>Review: </strong><%= @reviews.description, review_path(review.id) %></p>
+
+        </li>
+    <% end %>
+</ul>
+

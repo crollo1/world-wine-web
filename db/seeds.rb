@@ -152,14 +152,14 @@ puts "created #{ Wine.count } wines."
 
 #create associations
 
-# r1.wines << w1
-# r2.wines << w2
-# r3.wines << w3 << w9
-# r4.wines << w4 << w8
-# r5.wines << w5
-# r6.wines << w6
-# r7.wines << w7
-# r8.wines << w10
+r1.wines << w1
+r2.wines << w2
+r3.wines << w3 << w9
+r4.wines << w4 << w8
+r5.wines << w5
+r6.wines << w6
+r7.wines << w7
+r8.wines << w10
 
 ############################################################
 
@@ -197,9 +197,9 @@ puts "created #{ Review.count } reviews."
 #######################################
 #create associations
 
-# rev1.wines << w3
-# rev2.wines << w5
-# rev3.wines << w4
-# rev4.wines << w7
-# rev5.wines << w1
+w3.reviews << rev1
+w5.reviews << rev2
+w4.reviews << rev3
+w7.reviews << rev4
+w1.reviews << rev5
 

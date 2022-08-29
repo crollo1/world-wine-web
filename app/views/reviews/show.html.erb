@@ -1,10 +1,16 @@
 
-<h2><%= @review.score, @review.description %></h2>
+<h2></h2>
 
+Score: <strong><%= @review.score %> </strong>
+<br><br>
+"<em><%= @review.description %></em>"
+<br><br>
 
+<%= image_tag @review.wine.image, class: 'review' %>
+<br><br>
 <%= link_to 'Edit', edit_review_path(@review.id) %>
 ||
 <%= link_to 'Delete', review_path(@review.id), method: 'delete' %>
 <br><br>
 
-<%= image_tag @review.image, class: 'review' %>
+

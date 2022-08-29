@@ -1,9 +1,10 @@
 
 <h2><em><%= @region.name %></em>, <%= @region.country %></h2>
 
-<%= link_to 'Edit', edit_region_path(@region.id) %>
-|
-<%= link_to 'Delete', region_path(@region.id), method: 'delete' %>
+<%= image_tag @region.image, class: 'region' %>
 <br><br>
 
-<%= image_tag @region.image, class: 'region' %>
+<%= link_to 'Edit', edit_region_path(@region.id) %>
+||
+<%= link_to 'Delete', region_path(@region.id), method: 'delete' %>
+<br>
