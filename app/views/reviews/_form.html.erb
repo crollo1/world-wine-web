@@ -12,9 +12,9 @@
     <%= f.text_area :description %>
     <br><br>
 
-    <%# <%= f.hidden_field :wine_id %> %>
-    
-     <%= f.collection_select :wine_id, Wine.all, :id, :name, include_blank: true %>
+    <%# <%= f.hidden_field :wine_id %>
+
+    <%= f.collection_select :wine_id, Wine.all, :id, :name, include_blank: true %>
 
 
     <br><br>

@@ -10,7 +10,7 @@ Score: <strong><%= @review.score %> </strong>
 <br><br>
 <%= link_to 'Edit', edit_review_path(@review.id) %>
 ||
-<%= link_to 'Delete', review_path(@review.id), method: 'delete' %>
+<%= link_to 'Delete', review_path(@review.id), method: 'delete', :data => { :confirm => 'Are you sure you want to delete?' } %>
 <br><br>
 
 

@@ -26,6 +26,7 @@ class WinesController < ApplicationController
   def show
 
     @wine = Wine.find params[:id]
+    @review = Review.new
 
   end #show
 

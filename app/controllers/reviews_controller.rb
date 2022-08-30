@@ -12,6 +12,7 @@ class ReviewsController < ApplicationController
 
     @review = Review.new review_params
     @review.user_id = @current_user.id
+    # @review.wine_id = params[:wine_id]
     @review.save
 
     if @review.persisted?
@@ -52,8 +53,10 @@ class ReviewsController < ApplicationController
 
   def destroy
 
-    Review.destroy params[:id]
-    redirect_to wine_path(params[:review][:wine_id])
+    # review = Review.find params[:id]
+    review = Review.destroy params[:id]
+    redirect_to wine_path(review.wine_id)
+   
 
   end #destroy
 
@@ -61,7 +64,7 @@ class ReviewsController < ApplicationController
 
   def review_params
 
-    params.require(:review).permit(:score, :description, :wine_id)
+    params.require(:review).permit(:score, :description, :wine_id, :user_id)
     
   end
 

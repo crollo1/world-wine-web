@@ -1,16 +1,12 @@
 
 <h2>
     <%= @wine.name  %>
-    
 </h2>
 
 
 <%# <%= link_to 'See Some Reviews', reviews_path %> 
 
-<%= link_to '--> Review this Wine <--', new_review_path %>
-
-    
-<br>
+<%# <%= link_to '--> Review this Wine <--', new_review_path %> 
 
 <p>
     <strong>Name: </strong>
@@ -38,7 +34,7 @@
 <br><br><br>
 <%= link_to 'Edit Wine', edit_wine_path(@wine.id) %>
 ||
-<%= link_to 'Delete Wine', wine_path(@wine.id), method: 'delete' %>
+<%= link_to 'Delete Wine', wine_path(@wine.id), method: 'delete', :data => { :confirm => 'Are you sure you want to delete?' } %>
 <br><br>
 
 
@@ -55,7 +51,7 @@
             <% if @current_user.id == review.user_id %>
             <%= link_to 'Edit', edit_review_path(review.id) %>
             ||
-            <%= link_to 'Delete', review_path(review.id), method: 'delete' %>
+            <%= link_to 'Delete', review_path(review.id), method: 'delete', :data => { :confirm => 'Are you sure you want to delete?' } %>
 
             <% end %>
 
@@ -65,7 +61,33 @@
 
     <% end %>
 </ul>
-            
+
+<br>
+<div class="reviewform"> 
+    <h3>Review this Wine</h3>         
+    <%= form_with model: @review, local: true do |f| %>
 
 
+        <%= f.label :score %>
+        <br>
+        <%= f.number_field :score, in: 1..100 %>
+        <br><br>
+        
+        <%= f.label :description %>
+        <br>
+        <%= f.text_area :description %>
+        <br><br>
+
+        <%= f.hidden_field :wine_id, :value => @wine.id %>
+        <%# <%= f.hidden_field :user_id, :value => @current_user.id %> 
+
+
+        <%# <%= f.collection_select :wine_id, Wine.all, :id, :name, include_blank: true %>
+
+
+
+        <%= f.submit %>
+
+    <% end %>
+</div>
 
