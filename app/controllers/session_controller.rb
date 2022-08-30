@@ -26,7 +26,7 @@ class SessionController < ApplicationController
   def destroy
     
     session[:user_id] = nil #for loggin user out
-    redirect_to login_path #back to login page
+    redirect_to root_path #back to login page
 
   end #destroy
 

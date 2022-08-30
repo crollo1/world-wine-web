@@ -8,8 +8,16 @@ body {
     text-align: center;
     /* background: rgb(7,8,8);
     background: radial-gradient(circle, rgba(7,8,8,1) 0%, rgba(93,101,99,1) 100%);
-    color:aliceblue;
-    font-family: 'Syne', sans-serif; */
+    color:aliceblue;*/
+    font-family: 'Syne', sans-serif; 
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.w, .b {
+    font-size: 60px;
 }
 
 footer {

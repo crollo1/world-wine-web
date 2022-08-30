@@ -5,7 +5,7 @@
  <% @reviews.each do |review| %>
     <li>
         <p><strong>Score:</strong> <%= link_to review.score, review_path(review.id)  %></p>
-        
+
         <p><strong>Review: </strong><%= link_to review.description, review_path(review.id) %></p>
         
         
@@ -13,4 +13,3 @@
     <% end %>
 </ul>
 
-<img src="https://media.architecturaldigest.com/photos/57c9a2aceb60378a7b40892c/2:1/w_5108,h_2553,c_limit/champagne-caves-wine-cellars-01.jpg" class="reviewimage">
