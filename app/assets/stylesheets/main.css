@@ -6,15 +6,20 @@
 body {
     margin: 0 auto;
     text-align: center;
-    /* background: rgb(51,52,52);
-    background: linear-gradient(312deg, rgba(51,52,52,1) 0%, rgba(11,12,13,1) 100%); */
+    background: rgb(51,52,52);
+    background: linear-gradient(312deg, rgba(51,52,52,1) 0%, rgba(11,12,13,1) 100%);
     /*color:aliceblue;*/
+    color: antiquewhite;
     font-family: 'Syne', sans-serif; 
 }
 
 h1 {
     font-size: 40px;
     margin-top: 10px;
+}
+
+h2 {
+    color:antiquewhite;
 }
 
 label {
@@ -37,11 +42,12 @@ textarea {
 footer {
     text-align: left;
     margin-left: 10px;
+    color:antiquewhite;
 }
 
 a {
    text-decoration: none; 
-   color: black;
+   color: antiquewhite;
    padding: 2px;
    margin-top: 5px;
 }
@@ -49,10 +55,10 @@ a {
 nav {
     padding: 2px;
     margin-top: 5px;
-    /* background-image: cover; */
     background-image: url("https://thumbs.gfycat.com/BlissfulImpeccableChicken-size_restricted.gif");
     background-size: cover;
     background-repeat: no-repeat;
+    color:antiquewhite;
 }
 
 a:hover {
@@ -164,4 +170,22 @@ ul {
 
 h3 {
     margin-left: 10px;
+}
+
+.newwineform {
+    display: flex;
+    margin-left: 100px;
+    margin-right: 400px;
+    padding-left: 20px;
+
+}
+.winepour {
+    display: flex;
+    max-height: 50vh;
+    margin-left: 100px;
+    border-radius: 5px;
+}
+
+select {
+    margin-bottom: 10px;
 }
