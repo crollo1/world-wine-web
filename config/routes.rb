@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
   
 
+  
   root to: 'pages#home'
 
-  resources :wines, :regions, :reviews
+  get 'login' => 'session#new'
+  post 'login' => 'session#create'
+  delete 'login' => 'session#destroy'
+
+  resources :wines, :regions, :reviews, :users
 
 
 end

@@ -113,3 +113,14 @@ ul {
     margin-left: 20px;
 }
 
+.error {
+    color: rgb(229, 38, 38);
+}
+
+.errormsg {
+    color: rgb(229, 38, 38);
+}
+
+.errorcreate {
+    text-align: center;
+}

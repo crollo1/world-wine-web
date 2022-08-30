@@ -1,5 +1,7 @@
 class RegionsController < ApplicationController
   
+  before_action :check_if_logged_in, except: [:index]
+  
   def new
 
     @region = Region.new

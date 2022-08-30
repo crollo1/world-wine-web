@@ -1,5 +1,7 @@
 class ReviewsController < ApplicationController
 
+  before_action :check_if_logged_in, except: [:index]
+ 
   def new
 
     @review = Review.new
@@ -8,8 +10,16 @@ class ReviewsController < ApplicationController
 
   def create
 
-    Review.create review_params
-    redirect_to review_path
+    @review = Review.new review_params
+    @review.user_id = @current_user.id
+    @review.save
+
+    if @review.persisted?
+      redirect_to wine_path(params[:review][:wine_id])
+    else
+      render :new
+    end #else
+
 
   end #create
 
@@ -51,7 +61,7 @@ class ReviewsController < ApplicationController
 
   def review_params
 
-    params.require(:review).permit(:score, :description)
+    params.require(:review).permit(:score, :description, :wine_id)
     
   end
 

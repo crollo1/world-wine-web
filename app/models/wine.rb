@@ -1,7 +1,7 @@
 class Wine < ApplicationRecord
 
     belongs_to :region, optional: true
-    # belong_to :users
+    belongs_to :user, optional: true
     has_many :reviews
     
 end #Wine
