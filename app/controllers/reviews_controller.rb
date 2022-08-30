@@ -20,8 +20,8 @@ class ReviewsController < ApplicationController
       render :new
     end #else
 
-
   end #create
+
 
   def index
 
@@ -53,7 +53,7 @@ class ReviewsController < ApplicationController
   def destroy
 
     Review.destroy params[:id]
-    redirect_to reviews_path
+    redirect_to wine_path(params[:review][:wine_id])
 
   end #destroy
 

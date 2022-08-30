@@ -50,7 +50,22 @@
         
             <p><strong>Review: </strong>"<em><%= review.description%></em>"</p>
 
+            <p><strong>User: </strong><em><%= review.user_id%></em></p>
+
+            <% if @current_user.id == review.user_id %>
+            <%= link_to 'Edit', edit_review_path(review.id) %>
+            ||
+            <%= link_to 'Delete', review_path(review.id), method: 'delete' %>
+
+            <% end %>
+
         </li>
+        
+        
+
     <% end %>
 </ul>
+            
+
+
 

@@ -12,7 +12,7 @@ class UsersController < ApplicationController
         if @user.persisted?
             
             session[:user_id] = @user.id #auto login
-            redirect_to root_path #user profile page
+            redirect_to user_path(@user.id) #user profile page
 
         else
             

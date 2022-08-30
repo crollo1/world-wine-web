@@ -10,7 +10,7 @@ class SessionController < ApplicationController
     if user.present? && user.authenticate( params[:password] ) #checking if credentials are correct
 
       session[:user_id] = user.id
-      redirect_to root_path #home page
+      redirect_to user_path(user.id) #profile page
 
     else
 
