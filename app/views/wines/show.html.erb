@@ -3,6 +3,7 @@
     <%= @wine.name  %>
 </h2>
 
+<%=  %>
 
 <%# <%= link_to 'See Some Reviews', reviews_path %> 
 
@@ -25,7 +26,9 @@
 
 <p>
     <strong>Region :</strong>
+    <% if @wine.region.present? %>
     <%= link_to @wine.region.name, region_path(@wine.region.id) %>
+    <% end %>
     
 </p> 
 <p><em><%= link_to 'Back to Wine List', wines_path(@current_user.id), class: 'backtowinelist' %> || <%= link_to 'Back to Cellar',user_path(@current_user.id), class: 'backtocellar' %></p></em></p> 
@@ -47,7 +50,7 @@
         
             <p><strong>Review: </strong>"<em><%= review.description%></em>"</p>
 
-            <p><strong>User: </strong><em><%= review.user_id%></em></p>
+            <p><strong>User: </strong><em><%= review.user.name%></em></p>
 
             <% if @current_user.id == review.user_id %>
             <%= link_to 'Edit', edit_review_path(review.id) %>
@@ -80,10 +83,7 @@
         <br><br>
 
         <%= f.hidden_field :wine_id, :value => @wine.id %>
-        <%# <%= f.hidden_field :user_id, :value => @current_user.id %> 
 
-
-        <%# <%= f.collection_select :wine_id, Wine.all, :id, :name, include_blank: true %>
 
 
 

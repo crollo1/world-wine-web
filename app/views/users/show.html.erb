@@ -14,7 +14,7 @@
 <br><br>
 
 <div class="userwinelist">
-    <h3 class="yourwines">Your Wines:</h3>
+    <h3 class="yourwines">Your Favourite Wines:</h3>
         <ul class="wineslist">
 
             <% @current_user.wines.each do |wine| %>
@@ -33,7 +33,8 @@
 
             <% @current_user.reviews.each do |review| %>
             <li>
-            <%= link_to review.id, review_path(review.id) %>
+            <%= link_to review.wine.name, wine_path(review.wine.id) %>
+            <p><%= review.description.truncate_words(30) %></p>
             </li>
             <% end %>
 

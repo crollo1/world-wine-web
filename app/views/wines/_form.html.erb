@@ -1,29 +1,32 @@
 
-<%= form_with model: @wine, local: true do |f| %>
+<%= form_with model: @wine, local: true, html: { multipart: true } do |f| %>
 
      <%= f.label :name %>
     <br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, required: true %>
     <br><br>
 
      <%= f.label :style %>
     <br>
-    <%= f.text_field :style %>
+    <%= f.text_field :style, required: true %>
     <br><br>
 
      <%= f.label :vintage %>
     <br>
-    <%= f.text_field :vintage %>
+    <%= f.text_field :vintage, required: true %>
     <br><br>
 
-     <%= f.label :image, 'Image URL' %>
+    <%= f.label :image, 'Image URL' %>
     <br>
-    <%= f.text_field :image %>
+    <%= f.file_field :image, required: true %>
     <br><br>
 
     <%= f.label :region_id, 'Region' %>
     <%= f.collection_select :region_id, Region.all, :id, :name, include_blank: true %>
+    <br>
 
+    <%# <%= f.hidden_field :user_id %> %>
+    <br>
     <%= f.submit %>
 
 

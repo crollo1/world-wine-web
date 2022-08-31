@@ -223,7 +223,7 @@ puts "created #{ User.count } users"
 
 # add user --< wines associations ###################
 
-u1.wines << w3 << w4
+u1.wines << w3 << w4 
 u2.wines << w1 << w2
 u3.wines << w5 << w8 << w9
 u4.wines << w6 << w10
@@ -231,3 +231,7 @@ u5.wines << w7
 
 puts "User #{u1.name} has wines: #{u1.wines.pluck(:name).join(', ') }"
 puts "Wine '#{w10.name}' belongs to #{ w10.user.name }"
+
+u1.reviews << rev1 << rev2
+u2.reviews << rev3 << rev4
+u1.reviews << rev5
