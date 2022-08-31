@@ -1,6 +1,10 @@
 
 <h2> All Wines </h2>
 
+<% if @current_user.present? %>
+    <p><%= link_to 'Back to Cellar',user_path(@current_user.id), class: 'backtocellar' %></p>
+<% end %>
+
 <div id="winepage">
     <div id="wineindex">
         
@@ -16,7 +20,7 @@
         
         <br>
     </div>
-
+    
         
     <div id="listimage">
         <img class="winelist" src="https://elitetraveler.com/wp-content/uploads/sites/8/2021/11/GettyImages-1144313965-e1636390152967.jpg"> 

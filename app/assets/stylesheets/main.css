@@ -6,10 +6,10 @@
 body {
     margin: 0 auto;
     text-align: center;
-    background: rgb(51,52,52);
-    background: linear-gradient(312deg, rgba(51,52,52,1) 0%, rgba(11,12,13,1) 100%);
+    /* background: rgb(51,52,52);
+    background: linear-gradient(312deg, rgba(51,52,52,1) 0%, rgba(11,12,13,1) 100%); */
     /*color:aliceblue;*/
-    color: antiquewhite;
+    /* color: antiquewhite; */
     font-family: 'Syne', sans-serif; 
 }
 
@@ -19,7 +19,7 @@ h1 {
 }
 
 h2 {
-    color:antiquewhite;
+    /* color:antiquewhite; */
 }
 
 label {
@@ -32,14 +32,14 @@ input {
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 5px;
-    background-color: rgb(10, 9, 9);
-    border: none;
-    color: antiquewhite
+    /* background-color: rgb(10, 9, 9); */
+    /* border: none; */
+    /* color: antiquewhite */
 }
 
 textarea {
     margin-left: 10px;
-    background-color: rgb(10, 9, 9);
+    /* background-color: rgb(10, 9, 9); */
     border-radius: 5px;
     border: none;
 }
@@ -51,12 +51,12 @@ textarea {
 footer {
     text-align: left;
     margin-left: 10px;
-    color:antiquewhite;
+    /* color:antiquewhite; */
 }
 
 a {
    text-decoration: none; 
-   color: antiquewhite;
+   /* color: antiquewhite; */
    padding: 2px;
    margin-top: 5px;
 }
@@ -67,7 +67,7 @@ nav {
     background-image: url("https://thumbs.gfycat.com/BlissfulImpeccableChicken-size_restricted.gif");
     background-size: cover;
     background-repeat: no-repeat;
-    color:antiquewhite;
+    /* color:antiquewhite; */
 }
 
 a:hover {
@@ -197,9 +197,19 @@ h3 {
 
 select {
     margin-bottom: 10px;
-    background-color: rgb(10, 9, 9);
+    /* background-color: rgb(10, 9, 9); */
     border-radius: 5px;
     padding: 5px;
     border: none;
-    color:antiquewhite;
+    /* color:antiquewhite; */
+}
+
+.yourwines {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.yourreviews {
+    text-align: left;
+    margin-left: 20px;
 }

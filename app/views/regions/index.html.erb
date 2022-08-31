@@ -4,7 +4,10 @@
 
 
 <%= link_to '--> Add a Favourite Region <--', new_region_path %>
-
+<br>
+<% if @current_user.present? %>
+    <p><%= link_to 'Back to Cellar',user_path(@current_user.id), class: 'backtocellar' %></p>
+<% end %>
 
 <div id="regionpage">
 
