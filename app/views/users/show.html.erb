@@ -13,16 +13,29 @@
 <img src="https://images.unsplash.com/photo-1609238000857-303bf54099b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="reviewimage">
 <br><br>
 
-<h3 class="yourwines">Your Wines:</h3>
-    <ul>
+<div class="userwinelist">
+    <h3 class="yourwines">Your Wines:</h3>
+        <ul class="wineslist">
 
-        <% @current_user.wines.each do |wine| %>
-        <li>
-        <%= link_to wine.name, wine_path(wine.id) %>
-        </li>
-        <% end %>
+            <% @current_user.wines.each do |wine| %>
+            <li>
+            <%= link_to wine.name, wine_path(wine.id) %>
+            </li>
+            <% end %>
 
-    </ul>
-<br><br>
+        </ul>
+</div>
 
-<h3 class="yourreviews">Your Reviews:</h3>
+
+<div class="userreviews">
+   <h3 class="yourreviews">Your Reviews:</h3>
+        <ul class="reviewslist">
+
+            <% @current_user.reviews.each do |review| %>
+            <li>
+            <%= link_to review.id, review_path(review.id) %>
+            </li>
+            <% end %>
+
+        </ul>
+</div>

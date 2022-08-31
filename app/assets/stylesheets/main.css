@@ -213,3 +213,11 @@ select {
     text-align: left;
     margin-left: 20px;
 }
+
+.wineslist {
+    margin-left: 30px;
+}
+
+.reviewslist {
+    margin-left: 30px;
+}
