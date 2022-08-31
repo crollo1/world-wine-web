@@ -28,7 +28,7 @@
     <%= link_to @wine.region.name, region_path(@wine.region.id) %>
     
 </p> 
-<p><em><%= link_to 'Back to Wine List', wines_path(@current_user.id), class: 'backtowinelist' %></em></p> 
+<p><em><%= link_to 'Back to Wine List', wines_path(@current_user.id), class: 'backtowinelist' %> || <%= link_to 'Back to Cellar',user_path(@current_user.id), class: 'backtocellar' %></p></em></p> 
 <br>
 
 <%= image_tag @wine.image, class: 'wine' %>
