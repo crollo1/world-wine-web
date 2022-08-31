@@ -1,24 +1,51 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<h1> World-Wine-Web </h1>
+<hr>
+World-Wine-Web is a platform to share the very best information on wine varietals, vintages, regions and reviews - complete with your very own <strong>Cellar</strong>, where you can build your own collection!
 
-Things you may want to cover:
+I created this web application for my second individual project for General Assembly Software Engineering Immersive Course. We were tasked to create a CRUD system using everything we had learnt in the last 5 weeks about front and back end web development. We were given about a week and a half to create a functioning application complete with Models (at least 3), Views, Controllers, Gems and site deployment (Heroku).
 
-* Ruby version
+## For Cellar Owners:
+<hr>
+• Build, edit and share your own collection of favourite wines and reviews - and share them with the world!
 
-* System dependencies
+## Logins
+<hr>
 
-* Configuration
+Admin:
+    Email: craig@ga.com
+    Password: chickens
 
-* Database creation
+Other Users:
+    Email: luke@ga.com
+    Password: ********
 
-* Database initialization
+    Email: kris@ga.com
+    Password: ********
 
-* How to run the test suite
+## Object Model Associations
 
-* Services (job queues, cache servers, search engines, etc.)
+(Add wireframes here - add Favourite with user_id and wine_id??)
 
-* Deployment instructions
+## Features
+<hr>
+1. Sign in/Sign out
+<br>
+2. Create Users Profile
+<br>
+3. Password encryption
+<br>
+4. Add new wines, regions and reviews
+<br>
+5. Edit or delete any of your own additions
+<br>
+6.
+ 
 
-* ...
+
+
+
+
+
+
+

@@ -3,11 +3,11 @@
 
 
 
-<%= link_to '--> Add a Favourite Region <--', new_region_path %>
-<br>
+
 <% if @current_user.present? %>
-    <p><%= link_to 'Back to Cellar',user_path(@current_user.id), class: 'backtocellar' %></p>
+    <p><%= link_to 'BACK TO CELLAR',user_path(@current_user.id), class: 'backtocellar' %></p>
 <% end %>
+<%= link_to '--> Add a Favourite Region <--', new_region_path %>
 
 <div id="regionpage">
 

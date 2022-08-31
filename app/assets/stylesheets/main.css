@@ -142,6 +142,7 @@ ul {
 .reviewimage {
     max-width: 60vw;
     border-radius: 5px;
+    /* border-style:inset; */
 }
 
 .reviewlist {
