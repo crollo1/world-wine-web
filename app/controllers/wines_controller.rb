@@ -12,6 +12,15 @@ class WinesController < ApplicationController
   def create
 
     Wine.create wine_params
+
+    if params[:file].present?
+
+      response = Cloudinary::Uploader.upload(params[:file])
+      wine.image = response["public_id"]
+      wine.save
+
+    end #if
+
     redirect_to wines_path
 
   end #create
@@ -40,9 +49,19 @@ class WinesController < ApplicationController
   def update
 
     wine = Wine.find params[:id]
-    wine.update wine_params
+    # wine.update wine_params
 
+    if params[:file].present?
+
+      req = Cloudinary::Uploader.upload(params[:file])
+      wine.image = req["public_id"]
+
+    end #if
+
+    wine.update_attributes(wine_params)
+    wine.save
     redirect_to wine_path(wine.id)
+
 
   end #update
 

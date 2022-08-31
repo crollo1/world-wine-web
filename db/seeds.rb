@@ -7,7 +7,7 @@ r1 = Region.create!(
 
     name: 'Otago',
     country: 'New Zealand',
-    image: 'https://www.hawkesbaynz.com/assets/Uploads/Craggy-Range-Giants-Winery.jpg'
+    image: 'https://www.wineware.co.uk/content/images/thumbs/0020666_de-longs-wine-map-of-new-zealand-wine-regions.jpeg'
 
 )
 
@@ -15,7 +15,7 @@ r2 = Region.create!(
 
     name: 'Alsace',
     country: 'France',
-    image: 'https://www.winetraveler.com/wp-content/uploads/2019/11/alsace-wine-route-itinerary-france-winetraveler.jpg'
+    image: 'https://www.cellartours.com/wp-content/uploads/france/wine-maps/alsace-wine-region-map.jpg'
 
 )
 
@@ -23,7 +23,7 @@ r3 = Region.create!(
 
     name: 'Tuscany',
     country: 'Italy',
-    image: 'https://www.walksofitaly.com/blog/wp-content/uploads/2013/10/Vineyeard-in-Chianti-Tuscany-Italy-famous-landscape.jpg'
+    image: 'https://www.cellartours.com/wp-content/uploads/italy/wine-maps/tuscany-wine-regions-map.jpg'
 
 )
 
@@ -31,7 +31,7 @@ r4 = Region.create!(
 
     name: 'Barossa Valley',
     country: 'Australia',
-    image: 'https://content.api.news/v3/images/bin/e375306df500f3bc5f069ea0f2535f6e'
+    image: 'https://i.pinimg.com/originals/b0/93/09/b09309e2a36d2520e809b0812093dd64.jpg'
 
 )
 
@@ -39,7 +39,7 @@ r5 = Region.create!(
 
     name: 'Provence',
     country: 'France',
-    image: 'https://static.seetheworld.com/image_uploader/photos/25/original/chateau-de-berne-lorgues-lorgues.jpg'
+    image: 'https://images.rimontgowineries.com/build/maps/provence.037fcce0.jpg'
 
 )
 
@@ -47,7 +47,7 @@ r6 = Region.create!(
 
     name: 'Champagne',
     country: 'France',
-    image: 'https://www.expatica.com/app/uploads/sites/5/2014/05/champagne-1920x1080.jpg'
+    image: 'https://www.cellartours.com/wp-content/uploads/france/wine-maps/champagne-wine-region-map.jpg'
 
 )
 
@@ -55,7 +55,7 @@ r7 = Region.create!(
 
     name: 'Mendoza',
     country: 'Argentina',
-    image: 'https://www.winetourism.com/files/2019/11/Mendoza-min.jpg'
+    image: 'https://media.winefolly.com/mendoza-wine-map.jpg'
 
 )
 
@@ -63,7 +63,7 @@ r8 = Region.create!(
 
     name: 'Rheingau',
     country: 'Germany',
-    image: 'https://assets.vivino.com/oVALCvbFLF4nTaJEg53FBuzB'
+    image: 'https://i.pinimg.com/originals/23/b4/79/23b479c83d701b1494febf5c96db81e1.jpg'
 
 )
 
@@ -169,27 +169,27 @@ Review.destroy_all
 
 rev1 = Review.create!(
     score: 85, 
-    description: 'Strong body, soft finish'
+    description: "This wine is well-aged with rich notes of berries, plum, and spices. Due to a careful winemaking process, Abbazia Barbera d'Asti carries beautiful tannins, a ruby red color, and phenolic compounds. On the palate, this wine is velvety with light acidity and a persistent aftertaste."
 )
 
 rev2 = Review.create!( 
     score: 91, 
-    description: 'Delicate balance, all round pleasure'
+    description: 'The rosé has a pale pink dress, aromatic floraland citrus notes with a good acidity on the finish. Very pleasant for aperitifs and summer meals. The vines are grown on selected plots located around Brignoles. Bodvár N°8 is the  BIO alternative in our provence portfolio, a bit more attitude rosé with finesse, complexity. The rosé is ideal for gastronomy and/or sunny days together with friends.'
 )
 
 rev3 = Review.create!( 
     score: 98,  
-    description: 'Worth every cent, lives up to its name'
+    description: "An utterly superb wine, a glorious freak of nature and man; ethereal and beguiling, yet the palate is virtually endless, with a peacock's tale stolen from the very greatest of Burgundies; the fruit sweetness perfectly offset by acidity… The 100 point dry red? Why not! This is possibly the greatest red wine tasted in our times in Australia."
 )
 
 rev4 = Review.create!( 
     score: 67, 
-    description: 'No structure, overpowering tannins'
+    description: "Alejandro Vigil's El Enemigo wines are worth jumping on if you like full-bodied, robust Argentinean reds. This is typically smoky and dark up front, with molasses, marzipan and blackberry aromas. The palate clamps down with tannic grip, while flavors of oak, blackberry, tobacco, vanilla and spices end briary and with subtlety, which is what makes this powerful wine so good. Drink through 2019."
 )
 
 rev5 = Review.create!( 
     score: 88, 
-    description: 'Sign me up for more! A real pleaser for the price point'
+    description: 'The most memorable wine was the 2020 Craggy Range Aroha Pinot Noir from their Te Muna vineyard in Martinborough. It was sensational! Intense, multi-faceted wine with a to-die-for texture. It certainly had the X-factor. I recall thinking that it was a candidate for a 100-point score but settled for an unwritten 99 points.'
 )
 
 puts "created #{ Review.count } reviews."
@@ -234,4 +234,4 @@ puts "Wine '#{w10.name}' belongs to #{ w10.user.name }"
 
 u1.reviews << rev1 << rev2
 u2.reviews << rev3 << rev4
-u1.reviews << rev5
+u3.reviews << rev5

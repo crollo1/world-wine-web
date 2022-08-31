@@ -3,13 +3,13 @@
 
     <%= f.label :name %>
     <br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, required: true %>
     <br><br>
 
 
     <%= f.label :country %>
     <br>
-    <%= f.text_field :country %>
+    <%= f.text_field :country, required: true %>
     <br><br>
 
 
@@ -19,6 +19,6 @@
     <br><br>
 
     <%= f.submit %>
-    
+
 
 <% end %>

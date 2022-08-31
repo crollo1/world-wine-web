@@ -4,12 +4,12 @@
 
     <%= f.label :email, 'Email Address' %>
     <br>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, required: true %>
     <br><br>
 
     <%= f.label :password %>
     <br>
-    <%= f.password_field :password %>
+    <%= f.password_field :password, required: true %>
     <br><br>
 
     <%= f.submit %>
