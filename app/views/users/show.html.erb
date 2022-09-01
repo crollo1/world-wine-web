@@ -11,33 +11,38 @@
 
 
 <%# <img src="https://images.unsplash.com/photo-1609238000857-303bf54099b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="reviewimage"> %>
-<%= cl_image_tag("photo-1609238000857-303bf54099b1_qt2ph7", class: "reviewimage") %>
-<br><br>
 
-<div class="userwinelist">
-    <h3 class="yourwines">Your Favourite Wines:</h3>
-        <ul class="wineslist">
+<div class="cellarpage">
 
-            <% @current_user.wines.each do |wine| %>
-            <li>
-            <%= link_to wine.name, wine_path(wine.id) %>
-            </li>
-            <% end %>
+    <%# <%= cl_image_tag("photo-1609238000857-303bf54099b1_qt2ph7", class: "reviewimage") %>
+    <br><br>
 
-        </ul>
-</div>
+    <div class="userwinelist">
+        <h3 class="yourwines">Your Favourite Wines:</h3>
+            <ul class="wineslist">
+
+                <% @current_user.wines.each do |wine| %>
+                <li>
+                <%= link_to wine.name, wine_path(wine.id) %>
+                </li>
+                <% end %>
+
+            </ul>
+    </div>
 
 
-<div class="userreviews">
-   <h3 class="yourreviews">Your Reviews:</h3>
-        <ul class="reviewslist">
+    <div class="userreviews">
+    <h3 class="yourreviews">Your Reviews:</h3>
+            <ul class="reviewslist">
 
-            <% @current_user.reviews.each do |review| %>
-            <li>
-            <%= link_to review.wine.name, wine_path(review.wine.id) %>
-            <p><%= review.description.truncate_words(30) %></p>
-            </li>
-            <% end %>
+                <% @current_user.reviews.each do |review| %>
+                <li>
+                <%= link_to review.wine.name, wine_path(review.wine.id) %>
+                <p><%= review.description.truncate_words(30) %></p>
+                </li>
+                <% end %>
 
-        </ul>
+            </ul>
+    </div>
+
 </div>

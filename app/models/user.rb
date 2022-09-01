@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
     has_secure_password
 
+    has_and_belongs_to_many :wines, optional: true
+
     has_many :wines, dependent: :destroy
     has_many :reviews, dependent: :destroy 
 

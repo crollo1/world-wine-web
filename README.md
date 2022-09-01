@@ -64,7 +64,7 @@ APIs: (???)
 # To Do List
 
     • Profile Picture
-    • CSS Media Query
+    • Improve and complete CSS Media Query
     • API ??
     • JavaScript functions
     •
