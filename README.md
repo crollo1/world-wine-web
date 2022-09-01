@@ -3,16 +3,21 @@
 <hr>
 World-Wine-Web is a platform to share the very best information on wine varietals, vintages, regions and reviews - complete with your very own <strong>Cellar</strong>, where you can build your own collection!
 
-<em>Browse my site here --> (insert link)
+<em>Browse my site here --> https://world-wine-web.herokuapp.com/
 
 I created this web application for my second individual project for General Assembly Software Engineering Immersive Course. We were tasked to create a CRUD system using everything we had learnt in the last 5 weeks about front and back end web development. We were given about a week to create a functioning application complete with at least 3 Models, Views, Controllers, Gems and site deployment (Heroku).
+
+<br>
 
 ## For Cellar Owners:
 <hr>
 • Build, edit and share your own collection of favourite wines and reviews - and share them with the world!
 
-## Logins
+<br>
+
+## Logins:
 <hr>
+
 
 Admin:
 
@@ -66,9 +71,13 @@ Gems:
     • Bcrypt
     • Cloudinary
 <br>
-APIs: (???)
+<br>
+
 
 ## Bugs
+
+    • 'favourite_wines' not connected properly with required routes and 'Add to Favourites' submit button (due to time constraints)
+    • CSS media query not completed (due to time constraints) 
 <hr>
 
 # To Do List
@@ -76,8 +85,6 @@ APIs: (???)
     • Profile Pictures
     • Improve CSS Media Query
     • Wine search API 
-    • Link to 'Explore Region' videos
-    •
 
 ## Screenshots
 

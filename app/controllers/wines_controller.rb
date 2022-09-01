@@ -55,7 +55,7 @@ class WinesController < ApplicationController
   end #edit
 
   def update
-    raise 'hell'
+    # raise 'hell'
     @wine = Wine.find params[:id]
     @wine.user_id = @current_user.id
     # wine.update wine_params
@@ -89,7 +89,7 @@ class WinesController < ApplicationController
 
   def wine_params 
 
-    params.require(:wine).permit(:name, :style, :vintage, :image, :region_id, :user_id)
+    params.require(:wine).permit(:name, :style, :vintage, :region_id, :user_id)
 
   end
 
