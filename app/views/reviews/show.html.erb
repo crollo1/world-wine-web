@@ -8,9 +8,11 @@ Score: <strong><%= @review.score %> </strong>
 
 <%= image_tag @review.wine.image, class: 'review' %>
 <br><br>
-<%= link_to 'Edit', edit_review_path(@review.id) %>
-||
-<%= link_to 'Delete', review_path(@review.id), method: 'delete', :data => { :confirm => 'Are you sure you want to delete?' } %>
+
+    <%= link_to 'Edit', edit_review_path(@review.id) %>
+    ||
+    <%= link_to 'Delete', review_path(@review.id), method: 'delete', :data => { :confirm => 'Are you sure you want to delete?' } %>
+
 <br><br>
 
 

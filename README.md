@@ -38,23 +38,47 @@ Other Users:
     Email: shay@ga.com
     Password: chicken
 
-### Object Model Associations
+## Object Model Associations
 
 ![Wireframe](/app/assets/images/wireframe.png)
+<hr>
 
 ## Features
 <hr>
 1. Sign in/Sign out
-<br>
+<br><br>
 2. Create Users Profile
+
+    •Gain access to the whole site, based from your own cellar (profile)
+
 <br>
-3. Password encryption
+3. Password encryption:
+
+    • To protect your user information
+    • Update your details/password from within your profile
+
 <br>
-4. Add new wines, regions and reviews
+4. Add:
+
+    • New wines, regions and reviews 
+    • Edit or delete any of your own additions of wines and reviews
 <br>
-5. Edit or delete any of your own additions
+5. 
+    
+    • Explore an extensive wine list and any region associated with them
 <br>
-6. 
+6. Delete function:
+
+    • This is only visible to the logged in user for their reviews and wines, and administrator (log in details provided above) for Regions.
+<br>
+7. Flash messages:
+
+    • For any error with data entered incorrectly during login
+    • Any incomplete required fields with login, update or create
+    • 'Delete' warning message to confirm any delete action
+
+<br>
+<hr>
 
 
 ## Tools and Gems used
@@ -82,9 +106,11 @@ Gems:
 
 # To Do List
 
-    • Profile Pictures
-    • Improve CSS Media Query
+    • Add Profile Pictures and Favourite Wines list for users
+    • Device optimization
+    • Enhance Admin user privileges
     • Wine search API 
+    • Would enjoy having a new image replace the Wine and Region Index image with each refresh 
 
 ## Screenshots
 
