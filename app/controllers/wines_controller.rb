@@ -11,19 +11,27 @@ class WinesController < ApplicationController
 
   def create
 
-    Wine.create wine_params
+    @wine = Wine.new wine_params
+    @wine.user_id = @current_user.id
 
-    if params[:file].present?
+    if params[:wine][:image].present?
 
-      response = Cloudinary::Uploader.upload(params[:file])
-      wine.image = response["public_id"]
-      wine.save
+      response = Cloudinary::Uploader.upload params[:wine][:image]
+      @wine.image = response["public_id"]
+      
+    end #if
+    
+    @wine.save
 
+    if @wine.persisted?
+      redirect_to wines_path
+    else
+      render :new
     end #if
 
-    redirect_to wines_path
-
   end #create
+  
+
 
   #Read #############################
   def index
@@ -47,20 +55,24 @@ class WinesController < ApplicationController
   end #edit
 
   def update
-
-    wine = Wine.find params[:id]
+    raise 'hell'
+    @wine = Wine.find params[:id]
+    @wine.user_id = @current_user.id
     # wine.update wine_params
 
-    if params[:file].present?
+    if params[:wine][:image].present?
 
-      req = Cloudinary::Uploader.upload(params[:file])
-      wine.image = req["public_id"]
+      response = Cloudinary::Uploader.upload params[:wine][:image]
+      @wine.image = response["public_id"]
 
     end #if
+    @wine.save
 
-    wine.update_attributes(wine_params)
-    wine.save
-    redirect_to wine_path(wine.id)
+    if @wine.update wine_params
+      redirect_to @wine
+    else
+      render :edit
+    end #else   
 
 
   end #update
