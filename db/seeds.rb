@@ -220,7 +220,7 @@ User.destroy_all
 
 u1 = User.create! name: 'Ali', email: 'ali@ga.com', password: 'chicken'
 
-u2 = User.create! name: 'Craig', email: 'craig@ga.com', password: 'chicken'
+u2 = User.create! name: 'Craig', email: 'craig@ga.com', password: 'chickens', admin: true
 
 u3 = User.create! name: 'Frankie', email: 'frankie@ga.com', password: 'chicken'
 

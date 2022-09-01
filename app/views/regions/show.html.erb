@@ -9,7 +9,9 @@
 <%= cl_image_tag(@region.image, class: 'region') %>
 <br><br>
 
-<%= link_to 'Edit', edit_region_path(@region.id) %>
-||
-<%= link_to 'Delete', region_path(@region.id), method: 'delete', :data => { :confirm => 'Are you sure you want to delete?' } %>
+<% if @current_user.admin == true %>
+    <%= link_to 'Edit', edit_region_path(@region.id) %>
+    ||
+    <%= link_to 'Delete', region_path(@region.id), method: 'delete', :data => { :confirm => 'Are you sure you want to delete?' } %>
+<% end %>
 <br>

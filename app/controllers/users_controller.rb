@@ -1,6 +1,8 @@
 
 class UsersController < ApplicationController
 
+    # before_action :check_for_admin
+
     def new
         @user = User.new
     end #new
