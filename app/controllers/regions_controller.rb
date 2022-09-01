@@ -1,7 +1,7 @@
 class RegionsController < ApplicationController
   
   before_action :check_if_logged_in, except: [:index]
-  
+
   def new
 
     @region = Region.new
@@ -11,6 +11,15 @@ class RegionsController < ApplicationController
   def create
 
     Region.create region_params
+
+    if params[:file].present?
+
+      response = Cloudinary::Uploader.upload(params[:file])
+      region.image = response["public_id"]
+      region.save
+
+    end #if
+
     redirect_to regions_path
 
   end #create
@@ -36,7 +45,15 @@ class RegionsController < ApplicationController
   def update
 
     @region = Region.find params[:id]
-    @region.update region_params
+
+    if params[:file].present?
+
+      req = Cloudinary::Uploader.upload(params[:file])
+      region.image = req["public_id"]
+
+    end #if
+
+    @region.update_attributes(region_params)
     redirect_to region_path(@region.id)
 
   end #update

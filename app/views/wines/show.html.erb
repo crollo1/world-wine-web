@@ -32,7 +32,7 @@
 <p><em><%= link_to 'Back to Wine List', wines_path(@current_user.id), class: 'backtowinelist' %> || <%= link_to 'Back to Cellar',user_path(@current_user.id), class: 'backtocellar' %></p></em></p> 
 <br>
 
-<%= image_tag @wine.image, class: 'wine' %>
+<%= cl_image_tag(@wine.image, class: 'wine') %>
 <br><br><br>
 <%= link_to 'Edit Wine', edit_wine_path(@wine.id) %>
 ||
