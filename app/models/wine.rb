@@ -1,7 +1,7 @@
 class Wine < ApplicationRecord
 
     
-    has_and_belongs_to_many :users, optional: true
+    has_and_belongs_to_many :favourited_by_users, class_name: 'User'
     
 
     belongs_to :region, optional: true

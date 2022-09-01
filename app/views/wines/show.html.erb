@@ -33,7 +33,9 @@
 <br>
 
 <%= cl_image_tag(@wine.image, class: 'wine') %>
-<br><br><br>
+<br><br>
+
+
 
 <% if @current_user.id == @wine.user_id %>
     <%= link_to 'Edit Wine', edit_wine_path(@wine.id) %>

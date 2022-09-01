@@ -1,11 +1,10 @@
 
 <h2><em><%= @region.name %></em>, <%= @region.country %></h2>
 
-<a href="">--> Explore this Region <--</a> <!--for youtube link??-->
-<br>
-<% if @current_user.present? %>
-    <p><%= link_to 'Back to Regions', regions_path(@current_user.id), class: 'backtoregions' %></p>
-<% end %>
+<p><%= link_to '--> Explore this Region <--', @region.video_url, target: '_blank' %> </p>
+ <!--for youtube link??-->
+
+<p><%= link_to 'Back to Regions', regions_path(@current_user.id), class: 'backtoregions' %></p>
 <%= cl_image_tag(@region.image, class: 'region') %>
 <br><br>
 

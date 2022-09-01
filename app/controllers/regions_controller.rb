@@ -31,7 +31,7 @@ class RegionsController < ApplicationController
   end #index
 
   def show
-
+  
     @region = Region.find params[:id]
 
   end #show
@@ -69,7 +69,7 @@ class RegionsController < ApplicationController
 
   def region_params
 
-    params.require(:region).permit(:name, :country, :image)
+    params.require(:region).permit(:name, :country, :image, :video_url)
 
   end #region_params
 

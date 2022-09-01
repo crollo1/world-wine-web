@@ -222,8 +222,14 @@ select {
     margin-left: 30px;
 }
 
+.favouritewines {
+    text-align: left;
+    margin-left: 10px; 
+}
+
 .reviewslist {
     margin-left: 30px;
+    margin-right: 30px;
 }
 
 #wine_image {
@@ -237,11 +243,20 @@ select {
 .cellarpage {
     display: grid;
     background-image: url("http://res.cloudinary.com/dqaoqrwls/image/upload/photo-1609238000857-303bf54099b1_qt2ph7");
+    /* opacity: 0.8; */
     border-radius: 5px;
     background-size: cover;
     background-position: center;
+    color: white;
 }
 
+/* #userwinelist {
+    opacity: 1;
+}
+
+#userreviews {
+    opacity: 1;
+} */
 
 .regionform {
     

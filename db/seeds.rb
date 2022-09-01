@@ -7,7 +7,8 @@ r1 = Region.create!(
 
     name: 'Otago',
     country: 'New Zealand',
-    image: '0020666_de-longs-wine-map-of-new-zealand-wine-regions_gramoi'
+    image: '0020666_de-longs-wine-map-of-new-zealand-wine-regions_gramoi',
+    video_url: 'https://www.youtube.com/watch?v=dYZA_nmeWEE'
 
 )
 
@@ -15,7 +16,8 @@ r2 = Region.create!(
 
     name: 'Alsace',
     country: 'France',
-    image: 'alsace-wine-region-map_vf5tao'
+    image: 'alsace-wine-region-map_vf5tao',
+    video_url: 'https://www.youtube.com/watch?v=_t1IwiqoC_M'
 
 )
 
@@ -23,7 +25,8 @@ r3 = Region.create!(
 
     name: 'Tuscany',
     country: 'Italy',
-    image: 'tuscany-wine-regions-map_sugtqx'
+    image: 'tuscany-wine-regions-map_sugtqx',
+    video_url: 'https://www.youtube.com/watch?v=R9W20jtMbs4'
 
 )
 
@@ -31,7 +34,8 @@ r4 = Region.create!(
 
     name: 'Barossa Valley',
     country: 'Australia',
-    image: 'b09309e2a36d2520e809b0812093dd64_ieu6xx'
+    image: 'b09309e2a36d2520e809b0812093dd64_ieu6xx',
+    video_url: 'https://www.youtube.com/watch?v=vGdRqqheXOU'
 
 )
 
@@ -39,7 +43,8 @@ r5 = Region.create!(
 
     name: 'Provence',
     country: 'France',
-    image: 'provence.037fcce0_twdvzb'
+    image: 'provence.037fcce0_twdvzb',
+    video_url: 'https://www.youtube.com/watch?v=1wzXfkLtXds'
 
 )
 
@@ -47,7 +52,8 @@ r6 = Region.create!(
 
     name: 'Champagne',
     country: 'France',
-    image: 'champagne-wine-region-map_wwdsua'
+    image: 'champagne-wine-region-map_wwdsua',
+    video_url: 'https://www.youtube.com/watch?v=ItOafbi9Kuc'
 
 )
 
@@ -55,7 +61,8 @@ r7 = Region.create!(
 
     name: 'Mendoza',
     country: 'Argentina',
-    image: 'mendoza-wine-map_qtnn8v'
+    image: 'mendoza-wine-map_qtnn8v',
+    video_url: 'https://www.youtube.com/watch?v=tn-Z27gielc'
 
 )
 
@@ -63,7 +70,8 @@ r8 = Region.create!(
 
     name: 'Rheingau',
     country: 'Germany',
-    image: '23b479c83d701b1494febf5c96db81e1_i61md1'
+    image: '23b479c83d701b1494febf5c96db81e1_i61md1',
+    video_url: 'https://www.youtube.com/watch?v=uXjz0RC7MrU'
 
 )
 
@@ -71,7 +79,8 @@ r9 = Region.create!(
 
     name: 'Piedmont',
     country: 'Italy',
-    image: 'piedmont-wine-map-1024x714_vrm4v7'
+    image: 'piedmont-wine-map-1024x714_vrm4v7',
+    video_url: 'https://www.youtube.com/watch?v=7ASVKXT8EkM'
 
 )
 
@@ -246,3 +255,10 @@ puts "Wine '#{w10.name}' belongs to #{ w10.user.name }"
 u1.reviews << rev1 << rev2
 u2.reviews << rev3 << rev4
 u3.reviews << rev5
+
+# add favourite_wines --< user associations #############
+
+u1.favourite_wines << w5 << w8
+u2.favourite_wines << w3 << w6
+u3.favourite_wines << w9
+
