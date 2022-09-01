@@ -30,7 +30,7 @@ label {
 input {
     margin-top: 5px;
     margin-left: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding: 10px;
     border-radius: 5px;
     background-color: rgb(10, 9, 9);
@@ -187,17 +187,20 @@ h3 {
 }
 
 .newwineform {
+
     display: flex;
+    margin-top: 30px;
     margin-left: 100px;
     margin-right: 400px;
     padding-left: 20px;
 
 }
 .winepour {
+    
     display: flex;
     max-height: 50vh;
-    margin-left: 100px;
-    margin-top: 50px;
+    margin-left: 150px;
+    margin-top: 20px;
     border-radius: 5px;
 }
 
@@ -238,8 +241,32 @@ select {
 
 .regionsnew {
     
+    display: inline-block;
     /* background-image: url("ales-maze-z0bACVUDTJM-unsplash_ouldpt"); */
-    max-width: 95vw;
-    max-height: 95vh;
+    max-width: 70vw;
+    max-height: 70vh;
     border-radius: 5px;
 }
+
+.regionform {
+    width: 100%;
+    position: absolute;
+    top: 350px;
+    left: 150px;
+}
+
+@media (max-width: 550px){
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .w, .b {
+        font-size: 30px;
+    }
+
+    a {
+        font-size: 10px;
+    }
+
+} 
