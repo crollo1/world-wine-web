@@ -235,3 +235,14 @@ select {
     border: none;
     color:antiquewhite;
 }
+
+.regionsnew {
+    
+    /* background-image: url("ales-maze-z0bACVUDTJM-unsplash_ouldpt"); */
+    max-width: 95vw;
+    max-height: 95vh;
+    border-radius: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:antiquewhite;
+}
