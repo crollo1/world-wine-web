@@ -69,7 +69,8 @@ Other Users:
 <br>
 6. Delete function:
 
-    • This is only visible to the logged in user for their reviews and wines, and administrator (log in details provided above) for Regions.
+    • Admin permissions for all edit and delete functions (log in details provided above).
+    • This is only visible to the logged in user for their reviews and wines
 <br>
 7. Flash messages:
 
@@ -90,17 +91,14 @@ Ruby on rails was the main tool used to create this web application. <br>
     • HTML & ERB
     • Heroku
     • Cloudinary
-<br>
-Gems:
     • Bcrypt
-    • Cloudinary
-<br>
+
 <br>
 
 
 ## Bugs
 
-    • 'favourite_wines' not connected properly with required routes and 'Add to Favourites' submit button (due to time constraints)
+    • 'favourite_wines' path not connected with required routes and 'Add to Favourites' submit button (due to time constraints)
     • CSS media query not completed (due to time constraints) 
 <hr>
 
@@ -108,7 +106,6 @@ Gems:
 
     • Add Profile Pictures and Favourite Wines list for users
     • Device optimization
-    • Enhance Admin user privileges
     • Wine search API 
     • Would enjoy having a new image replace the Wine and Region Index image with each refresh 
 

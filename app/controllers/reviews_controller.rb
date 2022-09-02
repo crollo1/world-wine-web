@@ -43,11 +43,10 @@ class ReviewsController < ApplicationController
   end #edit
 
   def update
-
+    # raise 'hell'
     @review = Review.find params[:id]
     @review.update review_params
-    redirect_to reviews_path
-    params[:id]
+    redirect_to wine_path(@review.wine_id)
 
   end #update
 

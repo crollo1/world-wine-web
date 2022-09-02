@@ -10,17 +10,34 @@ class RegionsController < ApplicationController
 
   def create
 
-    Region.create region_params
+    @region = Region.new region_params
 
-    if params[:file].present?
+    if params[:region][:image].present?
 
-      response = Cloudinary::Uploader.upload(params[:file])
-      region.image = response["public_id"]
-      region.save
-
+      response = Cloudinary::Uploader.upload params[:region][:image]
+      @region.image = response["public_id"]
+      
     end #if
+    
+    @region.save
 
-    redirect_to regions_path
+    if @region.persisted?
+      redirect_to regions_path
+    else
+      render :new
+    end #if
+    
+    # Region.create region_params
+
+    # if params[:file].present?
+
+    #   response = Cloudinary::Uploader.upload(params[:file])
+    #   region.image = response["public_id"]
+    #   region.save
+
+    # end #if
+
+    # redirect_to regions_path
 
   end #create
 
@@ -46,15 +63,32 @@ class RegionsController < ApplicationController
 
     @region = Region.find params[:id]
 
-    if params[:file].present?
+    if params[:region][:image].present?
 
-      req = Cloudinary::Uploader.upload(params[:file])
-      region.image = req["public_id"]
+      response = Cloudinary::Uploader.upload params[:region][:image]
+      @region.image = response["public_id"]
 
     end #if
+    @region.save
 
-    @region.update_attributes(region_params)
-    redirect_to region_path(@region.id)
+    if @region.update region_params
+      redirect_to @region
+    else
+      render :edit
+    end #else  
+
+    # @region = Region.find params[:id]
+
+
+    # if params[:file].present?
+
+    #   req = Cloudinary::Uploader.upload(params[:file])
+    #   region.image = req["public_id"]
+
+    # end #if
+
+    # @region.update_attributes(region_params)
+    # redirect_to region_path(@region.id)
 
   end #update
 

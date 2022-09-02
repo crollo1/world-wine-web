@@ -7,14 +7,13 @@
 <% if @current_user.present? %>
     <p><%= link_to 'BACK TO CELLAR',user_path(@current_user.id), class: 'backtocellar' %></p>
 <% end %>
-<%= link_to '--> Add a Favourite Region <--', new_region_path %>
+<%= link_to '--> Add a New Region <--', new_region_path %>
 
 <div id="regionpage">
 
     
 
     <div id="regionimage">    
-        <%# <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="regionsimage"> %>
         <%= cl_image_tag("photo-1506377247377-2a5b3b417ebb_vadwns", class: "regionsimage") %>
     </div>
 

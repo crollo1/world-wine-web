@@ -6,11 +6,11 @@ class ApplicationController < ActionController::Base
 
         if session[:user_id].present?
             @current_user = User.find_by id: session[:user_id]
-        end #login-check
+        end #login-check: yes
 
         unless @current_user.present?
             session[:user_id] = nil
-        end #unless
+        end #unless 
 
     end #fetch_user
 

@@ -3,9 +3,7 @@
 
 <%= link_to '< Edit Details >', edit_user_path(@current_user.id) %>
 <br>
-<%# <%= link_to 'Delete', user_path(@current_user.id), method: 'delete' %> 
 
-<!---add checks for user wines and reviews here-->
         
 <br>
 
@@ -14,7 +12,7 @@
 
     
     <br><br>
-
+    <!--Loop through users favourite wines-->
     <div class="favouritewines">
         <h3>Your Favourite Wines:</h3>
         <ul>
@@ -22,7 +20,7 @@
                 <li>
                 <%= link_to favourites.name, wine_path(favourites.id) %>
                 </li>
-            <% end %>
+            <% end %> 
         </ul>
     </div>
 

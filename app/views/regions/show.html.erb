@@ -2,7 +2,7 @@
 <h2><em><%= @region.name %></em>, <%= @region.country %></h2>
 
 <p><%= link_to '--> Explore this Region <--', @region.video_url, target: '_blank' %> </p>
- <!--for youtube link??-->
+ <!--for youtube link, open in new tab-->
 
 <p><%= link_to 'Back to Regions', regions_path(@current_user.id), class: 'backtoregions' %></p>
 <%= cl_image_tag(@region.image, class: 'region') %>
