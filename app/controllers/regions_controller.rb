@@ -26,18 +26,6 @@ class RegionsController < ApplicationController
     else
       render :new
     end #if
-    
-    # Region.create region_params
-
-    # if params[:file].present?
-
-    #   response = Cloudinary::Uploader.upload(params[:file])
-    #   region.image = response["public_id"]
-    #   region.save
-
-    # end #if
-
-    # redirect_to regions_path
 
   end #create
 

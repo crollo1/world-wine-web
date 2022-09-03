@@ -85,11 +85,25 @@ class WinesController < ApplicationController
 
   end #destroy
 
+  def add_remove_favourites
+    
+    @wine = Wine.find params[:id]
+    if @current_user.favourite_wines.include?(@wine)
+       # user already liked wine , so unfavourite
+      @current_user.favourite_wines.delete(@wine)
+    else
+      # user doesn't like wine yet, so favourite
+      @current_user.favourite_wines << @wine  
+    end
+    redirect_to @wine
+
+  end
+
   private ######################################################
 
   def wine_params 
 
-    params.require(:wine).permit(:name, :style, :vintage, :region_id, :user_id)
+    params.require(:wine).permit(:name, :style, :vintage, :region_id, :user_id, :favourite_wines)
 
   end
 

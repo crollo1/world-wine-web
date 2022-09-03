@@ -106,6 +106,7 @@ Ruby on rails was the main tool used to create this web application. <br>
 
     • Add Profile Pictures and Favourite Wines list for users
     • Device optimization
+    • Wine search feature
     • Wine search API 
     • Would enjoy having a new image replace the Wine and Region Index image with each refresh 
 
