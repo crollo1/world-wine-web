@@ -98,7 +98,6 @@ Ruby on rails was the main tool used to create this web application. <br>
 
 ## Bugs
 
-    • 'favourite_wines' path not connected with required routes and 'Add to Favourites' submit button (due to time constraints)
     • CSS media query not completed (due to time constraints) 
 <hr>
 
