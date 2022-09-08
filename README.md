@@ -3,7 +3,7 @@
 <hr>
 World-Wine-Web is a platform to share the very best information on wine varietals, vintages, regions and reviews - complete with your very own <strong>Cellar</strong>, where you can build your own collection!
 
-<em>Browse my site here --> https://world-wine-web.herokuapp.com/
+<em>Browse my site here</em> --> https://world-wine-web.herokuapp.com/
 
 I created this web application for my second individual project for General Assembly Software Engineering Immersive Course. We were tasked to create a CRUD system using everything we had learnt in the last 5 weeks about front and back end web development. We were given about a week to create a functioning application complete with at least 3 Models, Views, Controllers, Gems and site deployment (Heroku).
 
